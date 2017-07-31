@@ -1,13 +1,13 @@
-;stdio lib will include the following functions
-;exit : xors rdi movs 60 to rax andn exits
+;stdio lib will export the following routines
 global exit, strlen, print_string, print_char, print_uint, print_int, get_word, flush_stdin, parse_uint, parse_int, string_equals, string_copy
 section .text
 
-;providereturn value in rdi
+;exit : movs 60 to rax and exits
 exit:
   mov rax , 60
   syscall
 
+;strlen: returns the length of 0 terminated 1 byte char string, not including the 0 byte 
 ;rdi will hold the string's base address
 ;rsi will be our accumulator
 ;we will return the result in the rax register
