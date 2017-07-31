@@ -1,5 +1,5 @@
 ;stdio lib will export the following routines
-extern exit, strlen, print_string, print_char, print_uint, print_int, get_word, flush_stdin, parse_uint, parse_int, string_equals, string_copy
+global exit, strlen, print_string, print_char, print_uint, print_int, get_word, flush_stdin, parse_uint, parse_int, string_equals, string_copy
 section .text
 
 ;exit : movs 60 to rax and exits
